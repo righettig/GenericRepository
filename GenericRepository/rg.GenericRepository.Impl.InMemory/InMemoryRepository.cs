@@ -11,8 +11,8 @@ namespace rg.GenericRepository.Impl.InMemory
         {
             Entities.Add(entity);
 
-            //if (entity.Id == 0)
-            //    entity.Id = _entities.Count;
+            // assign the id.
+            entity.Id = Entities.Count + 1;
         }
 
         public TEntity GetSingle(int entityId)
