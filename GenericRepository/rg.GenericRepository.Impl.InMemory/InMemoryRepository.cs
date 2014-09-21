@@ -11,8 +11,9 @@ namespace rg.GenericRepository.Impl.InMemory
         {
             Entities.Add(entity);
 
-            // assign the id.
-            entity.Id = Entities.Count + 1;
+            // assign the id: max+1 (unique)
+            var maxId = Entities.Max(e => e.Id);
+            entity.Id = maxId + 1;
         }
 
         public TEntity GetSingle(int entityId)
