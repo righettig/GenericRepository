@@ -3,11 +3,11 @@
     public interface IEntity
     {
         /// <summary>
-        /// Gets the id.
+        /// Gets or sets the identifier.
         /// </summary>
         /// <value>
-        /// The id.
+        /// The identifier.
         /// </value>
-        int Id { get; }
+        int Id { get; set; }
     }
 }
